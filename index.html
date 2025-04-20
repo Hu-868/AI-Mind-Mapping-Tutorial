@@ -8,7 +8,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>AI制作思维导图与Markdown语法</title>
+    <title>AI&思维导图</title>
+
+<style>
+        a {
+            position: relative;
+            color: #FF5733;
+            text-decoration: none;
+        }
+
+        a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #FF5733;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease-out;
+        }
+
+        a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
 </head>
 
 <body class="font-sans">
@@ -18,40 +44,72 @@
     <!-- 导航栏 -->
     <nav class="text-white fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">AI与Markdown指南</h1>
+            <h1 class="text-2xl font-bold">小胡のAI&思维导图</h1>
             <ul class="flex space-x-4">
                 <li><a href="#mindmap-concept" class="hover:text-gray-300 nav-link">思维导图概念</a></li>
                 <li><a href="#mindmap-tools" class="hover:text-gray-300 nav-link">常用工具</a></li>
-                <li><a href="#mindmap-methods" class="hover:text-gray-300 nav-link">制作方法</a></li>
+                <li><a href="#mindmap-methods" class="hover:text-gray-300 nav-link">如何用？</a></li>
                 <li><a href="#markdown" class="hover:text-gray-300 nav-link">Markdown</a></li>
             </ul>
         </div>
     </nav>
 
+
+	<p class="text-lg mb-4">PS：由于时间有限，以上全部内容仅代表个人看法和观点，有部分内容尚未经过核实，请理性食用（宇宙安全声明（划掉））</p>
+
+
     <!-- 主内容 -->
     <main class="container mx-auto p-8">
+
+<p class="text-lg mb-4">PS：由于时间有限，以上全部内容仅代表个人看法和观点，有部分内容尚未经过核实，请理性食用（宇宙安全声明（划掉））</p>
         <!-- 思维导图概念介绍 -->
         <section id="mindmap-concept" class="mb-8 p-6 rounded-lg shadow-md">
-            <h2 class="text-3xl font-bold mb-4">思维导图概念介绍</h2>
+            <h2 class="text-3xl font-bold mb-4">What is 思维导图 ？</h2>
             <p class="text-lg mb-4">思维导图是一种将思维形象化的方法，它运用图文并重的技巧，把各级主题的关系用相互隶属与相关的层级图表现出来，把主题关键词与图像、颜色等建立记忆链接。思维导图充分运用左右脑的机能，利用记忆、阅读、思维的规律，协助人们在科学与艺术、逻辑与想象之间平衡发展，从而开启人类大脑的无限潜能。</p>
         </section>
 
         <!-- 常用工具 -->
         <section id="mindmap-tools" class="mb-8 p-6 rounded-lg shadow-md">
             <h2 class="text-3xl font-bold mb-4">常用工具</h2>
-            <h3 class="text-2xl font-bold mb-2">（1）AI</h3>
-            <p class="text-lg mb-4">许多AI工具可用于思维导图制作，如ChatGPT，它能根据用户输入的文字信息，生成相关的思维导图框架。用户只需将主题和关键要点告知ChatGPT，它就会以清晰的结构呈现出大致的思维导图内容。此外，Midjourney等图像生成AI也可辅助生成具有创意和视觉效果的思维导图元素。</p>
+            <h3 class="text-2xl font-bold mb-2">（1）工具网站推荐</h3>
+            <p class="text-lg mb-4">① 30工具网——主打多功能，啥都有</p>
+            <a href="https://www.30aitool.com/">官网链接</a>
+            <p class="text-lg mb-4">② deepseek集成站</p>
+            <a href="https://www.qbitai.com/deepseeknav/cn/index.html">官网链接</a>
+            <h3 class="text-2xl font-bold mb-2">（2）AI</h3>
+            <p class="text-lg mb-4">① 豆包</p>
+            <a href="https://www.doubao.com/">官网链接　　　　　　</a>            <a href="https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao_pc/1.52.8/1002/Doubao_installer.exe">电脑版下载链接</a>
+            <p class="text-lg mb-4">② 文心一言</p>            
+            <a href="https://yiyan.baidu.com/">官网链接</a>
+            <p class="text-lg mb-4">③ 在问（自带思维导图功能）</p>    
+            <a href="https://zaiwen.xueban.org.cn/index">官网链接</a>
+            <p class="text-lg mb-4">④ Xmind Copilot 和 Xmind AI（Xmind旗下）</p>    
+            <a href="https://xmind.ai/">官网链接</a>
             <h3 class="text-2xl font-bold mb-2">（2）思维导图工具</h3>
-            <p class="text-lg mb-4">常见的专业思维导图工具包括XMind、MindManager等。XMind具有丰富的模板和多样的样式，操作简单，适合初学者和专业人士使用。MindManager功能强大，支持团队协作和与其他办公软件集成，常用于商务和项目管理场景。</p>
-        </section>
+	<p class="text-lg mb-4">① Xmind</p>
+	<a href="https://xmind.cn/">官网链接　　　　　　</a>			<a href="https://xmind.works/">在线版网址　　　　　　</a>	<a href="https://dl3.xmind.cn/Xmind-for-Windows-x64bit-25.01.01061-202501070746.exe">下载链接　　　　　　</a>
+            <p class="text-lg mb-4">② TreeMind树图（自带AI）</p>
+	<a href="https://shutu.cn/">官网链接　　　　　　</a>		<a href="https://download.shutu.cn/client/download/ShuTu-Win-1.0.11.exe?sign=703cef403f01beaa2be3398a008bfad5&t=6804cd87&attname=ShuTu-Win-1.0.11-direct.exe&v=3393726350">Windows版下载　　　　　　</a>		<a href="https://download.shutu.cn/client/download/ShuTu-Mac-1.0.11.dmg?sign=9d479df3665cd6977b1673e22e0bb137&t=6804cd88&v=3393726350">Mac版下载　　　　　　</a>
+	 <p class="text-lg mb-4">③ GitMind思乎（自带AI）</p>
+            <a href="https://gitmind.cn/">官网链接</a>		<a href="https://dlqn.aoscdn.com/gitmind-setup.exe?215aee877a072e1ad3a21fa9670c0fdb.exe">Windows版下载　　　　　　</a>		<a href="https://dlqn.aoscdn.com/gitmind-setup.exe?215aee877a072e1ad3a21fa9670c0fdb.exe">Mac版下载　　　　　　</a>
+	</section>
 
         <!-- 制作方法 -->
         <section id="mindmap-methods" class="mb-8 p-6 rounded-lg shadow-md">
-            <h2 class="text-3xl font-bold mb-4">制作方法</h2>
-            <h3 class="text-2xl font-bold mb-2">（1）全部AI</h3>
-            <p class="text-lg mb-4">使用全部AI制作思维导图时，首先明确主题和核心要点。然后将这些信息输入到支持思维导图生成的AI工具中，如ChatGPT。AI会根据输入生成初步的思维导图结构。用户可以进一步与AI交互，对结构进行调整和完善，添加更多细节和注释。最后，将生成的内容导出为所需的文件格式。</p>
-            <h3 class="text-2xl font-bold mb-2">（2）ds + Xmind</h3>
-            <p class="text-lg mb-4">这里的“ds”可以理解为数据收集和整理的过程。先通过各种渠道收集与主题相关的数据和信息，并进行整理和筛选。然后打开XMind软件，创建一个新的思维导图。将整理好的核心主题放在中心位置，依次添加各级分支，将相关的信息填充到分支中。利用XMind的各种功能，如添加图标、颜色标记等，使思维导图更加清晰和美观。</p>
+            <h2 class="text-3xl font-bold mb-4">如何用？</h2>
+            <h3 class="text-2xl font-bold mb-2">（1）全部使用AI</h3>
+            <p class="text-lg mb-4">额...没啥好说的，直接把你需要的甩给AI，不满意就让他改</p>
+            <h3 class="text-2xl font-bold mb-2">（2）deepseek + Xmind（保姆级教程/bushi）</h3>
+            <p class="text-lg mb-4">① 打开随便一个AI（推荐deepseek，当然用别的也无所谓）</p>
+            <p class="text-lg mb-4">② 告诉AI你要什么，如：“生成《离骚》思维导图大纲，用 Markdown 格式”，一定要强调Markdown格式！</p>
+            <p class="text-lg mb-4">③ 点击右上角 “复制” 按钮，保存生成的 Markdown 内容</p>
+            <p class="text-lg mb-4">⑤ 用电脑自带的记事本（Windows）或文本编辑（Mac）新建空白文档</p>
+            <p class="text-lg mb-4">⑥ 将 DeepSeek 生成的内容粘贴进去。将文件后缀从 “.txt” 改为 “.md”。注意，Windows 用户需在文件夹选项中开启 “显示文件扩展名”。</p>
+            <p class="text-lg mb-4">⑦ 进入Xmind，点击 “文件”→“导入”→“Markdown”，选择保存的 “.md” 文件</p>
+            <p class="text-lg mb-4">⑧ 根据自己的喜好，删删改改，美化样式就OK了。</p>
+            <p class="text-lg mb-4">（如果想根据已有内容生成思维导图，在第②步时选择上传文件即可）</p>
+
+
         </section>
 
         <!-- Markdown -->
@@ -59,7 +117,8 @@
             <h2 class="text-3xl font-bold mb-4">Markdown</h2>
             <h3 class="text-2xl font-bold mb-2">（1）介绍</h3>
             <p class="text-lg mb-4">Markdown是一种轻量级的标记语言，它使用简单的文本格式来创建富文本内容。由于其简洁性和易读性，Markdown被广泛应用于文档撰写、博客写作、项目说明等领域。在制作思维导图时，Markdown可以快速记录和整理思路，并且可以方便地转换为可视化的思维导图。</p>
-            <h3 class="text-2xl font-bold mb-2">（2）语法</h3>
+            <a href="https://markdown.liuchengtu.com/work/"  class="text-2xl font-bold mb-2">（2）在线编辑器（点击进入）</a>
+	<h3 class="text-2xl font-bold mb-2">（3）语法</h3>
             <div class="mb-4">
                 <h4 class="text-xl font-bold mb-2">标题表示主题</h4>
                 <p class="text-lg mb-2">在 Markdown 中，使用 `#` 来表示标题，`#` 的数量表示标题的级别，从1到6级。在思维导图中，不同级别的标题可以对应不同层级的主题。例如：</p>
@@ -174,7 +233,7 @@
         <!-- Markdown 转换区域 -->
         <div id="markdown-converter">
             <div id="markdown-input">
-                <textarea id="markdown-textarea" placeholder="输入 Markdown 文本"></textarea>
+                <textarea id="markdown-textarea" placeholder="输入 Markdown 文本，右侧可看到转换后的演示"></textarea>
             </div>
             <div id="markdown-output"></div>
         </div>
