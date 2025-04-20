@@ -1,64 +1,197 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>AI思维导图教程</title>
+    <title>AI制作思维导图与Markdown语法</title>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="assets/logo.png" alt="AI思维导图Logo" />
+
+<body class="font-sans">
+    <!-- 代码雨背景 -->
+    <canvas id="matrix"></canvas>
+
+    <!-- 导航栏 -->
+    <nav class="text-white fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">AI与Markdown指南</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#mindmap-concept" class="hover:text-gray-300 nav-link">思维导图概念</a></li>
+                <li><a href="#mindmap-tools" class="hover:text-gray-300 nav-link">常用工具</a></li>
+                <li><a href="#mindmap-methods" class="hover:text-gray-300 nav-link">制作方法</a></li>
+                <li><a href="#markdown" class="hover:text-gray-300 nav-link">Markdown</a></li>
+            </ul>
         </div>
-        <h1>AI思维导图教程</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">介绍</a></li>
-                <li><a href="#benefits">优点</a></li>
-                <li><a href="#tutorial">教程</a></li>
-                <li><a href="#contact">联系</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section id="introduction">
-            <h2>介绍</h2>
-            <p>思维导图是一种用于视觉化信息的工具，结合AI的力量，您可以提高思维效率。</p>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="container mx-auto p-8">
+        <!-- 思维导图概念介绍 -->
+        <section id="mindmap-concept" class="mb-8 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-4">思维导图概念介绍</h2>
+            <p class="text-lg mb-4">思维导图是一种将思维形象化的方法，它运用图文并重的技巧，把各级主题的关系用相互隶属与相关的层级图表现出来，把主题关键词与图像、颜色等建立记忆链接。思维导图充分运用左右脑的机能，利用记忆、阅读、思维的规律，协助人们在科学与艺术、逻辑与想象之间平衡发展，从而开启人类大脑的无限潜能。</p>
         </section>
 
-        <section id="benefits">
-            <h2>优点</h2>
-            <ul>
-                <li>提升信息组织能力</li>
-                <li>帮助快速捕捉和整理想法</li>
-                <li>提高学习和记忆效果</li>
-            </ul>
+        <!-- 常用工具 -->
+        <section id="mindmap-tools" class="mb-8 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-4">常用工具</h2>
+            <h3 class="text-2xl font-bold mb-2">（1）AI</h3>
+            <p class="text-lg mb-4">许多AI工具可用于思维导图制作，如ChatGPT，它能根据用户输入的文字信息，生成相关的思维导图框架。用户只需将主题和关键要点告知ChatGPT，它就会以清晰的结构呈现出大致的思维导图内容。此外，Midjourney等图像生成AI也可辅助生成具有创意和视觉效果的思维导图元素。</p>
+            <h3 class="text-2xl font-bold mb-2">（2）思维导图工具</h3>
+            <p class="text-lg mb-4">常见的专业思维导图工具包括XMind、MindManager等。XMind具有丰富的模板和多样的样式，操作简单，适合初学者和专业人士使用。MindManager功能强大，支持团队协作和与其他办公软件集成，常用于商务和项目管理场景。</p>
         </section>
 
-        <section id="tutorial">
-            <h2>教程</h2>
-            <p>以下是创建AI思维导图的步骤：</p>
-            <ol>
-                <li>选择一个主题。</li>
-                <li>使用AI工具生成相关的子主题。</li>
-                <li>将子主题可视化为思维导图。</li>
-                <li>与其他人分享并协作。</li>
-            </ol>
-            <img src="assets/diagram.png" alt="思维导图示例" />
+        <!-- 制作方法 -->
+        <section id="mindmap-methods" class="mb-8 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-4">制作方法</h2>
+            <h3 class="text-2xl font-bold mb-2">（1）全部AI</h3>
+            <p class="text-lg mb-4">使用全部AI制作思维导图时，首先明确主题和核心要点。然后将这些信息输入到支持思维导图生成的AI工具中，如ChatGPT。AI会根据输入生成初步的思维导图结构。用户可以进一步与AI交互，对结构进行调整和完善，添加更多细节和注释。最后，将生成的内容导出为所需的文件格式。</p>
+            <h3 class="text-2xl font-bold mb-2">（2）ds + Xmind</h3>
+            <p class="text-lg mb-4">这里的“ds”可以理解为数据收集和整理的过程。先通过各种渠道收集与主题相关的数据和信息，并进行整理和筛选。然后打开XMind软件，创建一个新的思维导图。将整理好的核心主题放在中心位置，依次添加各级分支，将相关的信息填充到分支中。利用XMind的各种功能，如添加图标、颜色标记等，使思维导图更加清晰和美观。</p>
         </section>
 
-        <section id="contact">
-            <h2>联系</h2>
-            <p>如有任何问题，请通过<a href="mailto:example@example.com">电子邮件</a>联系我们。</p>
+        <!-- Markdown -->
+        <section id="markdown" class="p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-4">Markdown</h2>
+            <h3 class="text-2xl font-bold mb-2">（1）介绍</h3>
+            <p class="text-lg mb-4">Markdown是一种轻量级的标记语言，它使用简单的文本格式来创建富文本内容。由于其简洁性和易读性，Markdown被广泛应用于文档撰写、博客写作、项目说明等领域。在制作思维导图时，Markdown可以快速记录和整理思路，并且可以方便地转换为可视化的思维导图。</p>
+            <h3 class="text-2xl font-bold mb-2">（2）语法</h3>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">标题表示主题</h4>
+                <p class="text-lg mb-2">在 Markdown 中，使用 `#` 来表示标题，`#` 的数量表示标题的级别，从1到6级。在思维导图中，不同级别的标题可以对应不同层级的主题。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code># 一级主题
+## 二级主题
+### 三级主题</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-title"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">列表表示分支</h4>
+                <p class="text-lg mb-2">Markdown支持有序列表和无序列表，可用于表示思维导图的分支。</p>
+                <p class="text-lg mb-2"><strong>无序列表</strong>：使用 `-`、`+` 或 `*` 来表示，例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>- 分支1
+- 分支2
+- 分支3</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-unordered-list"></div>
+                </div>
+                <p class="text-lg mb-2"><strong>有序列表</strong>：使用数字和 `.` 来表示，例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>1. 分支1
+2. 分支2
+3. 分支3</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-ordered-list"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">嵌套列表表示子分支</h4>
+                <p class="text-lg mb-2">通过嵌套列表，可以表示思维导图中的子分支。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>- 主分支
+  - 子分支1
+  - 子分支2
+    - 子子分支1</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-nested-list"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">强调突出重点</h4>
+                <p class="text-lg mb-2">使用 `*` 或 `_` 来表示斜体，使用 `**` 或 `__` 来表示粗体，可用于突出思维导图中的重点内容。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>**重要主题**
+*次要主题*</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-emphasis"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">链接和图片丰富内容</h4>
+                <p class="text-lg mb-2"><strong>链接</strong>：使用 `[链接文本](链接地址)` 的格式来创建链接，可用于在思维导图中引用外部资源。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>[相关资料](https://example.com)</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-link"></div>
+                </div>
+                <p class="text-lg mb-2"><strong>图片</strong>：使用 `![图片描述](图片地址)` 的格式来插入图片，可用于在思维导图中添加可视化元素。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>![示例图片](https://picsum.photos/200/300)</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-image"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">表格呈现数据</h4>
+                <p class="text-lg mb-2">Markdown 可以使用表格来清晰地呈现数据。表格由表头和内容组成，使用 `|` 分隔列，`---` 分隔表头和内容。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>| 表头 1 | 表头 2 |
+| ---- | ---- |
+| 内容 1 | 内容 2 |</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-table"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">脚注补充说明</h4>
+                <p class="text-lg mb-2">脚注可以用于对文本中的内容进行补充说明。在需要添加脚注的地方使用 `[^数字]` 标记，然后在文档的其他位置使用 `[^数字]: 脚注内容` 来定义脚注。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>这是一个脚注 [^1]。
+[^1]: 脚注的具体内容</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-footnote"></div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <h4 class="text-xl font-bold mb-2">任务列表管理任务</h4>
+                <p class="text-lg mb-2">任务列表可以用于管理任务，使用 `- [ ]` 表示未完成的任务，`- [x]` 表示已完成的任务。例如：</p>
+                <div class="syntax-example">
+                    <div class="syntax-code">
+                        <pre><code>- [ ] 待办事项 1
+- [x] 已完成事项 2</code></pre>
+                    </div>
+                    <div class="syntax-demo" id="demo-task-list"></div>
+                </div>
+            </div>
         </section>
+
+        <!-- Markdown 转换区域 -->
+        <div id="markdown-converter">
+            <div id="markdown-input">
+                <textarea id="markdown-textarea" placeholder="输入 Markdown 文本"></textarea>
+            </div>
+            <div id="markdown-output"></div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2023 AI思维导图教程</p>
+    <!-- 返回顶部按钮 -->
+    <div id="back-to-top" onclick="scrollToTop()">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="text-white p-4 text-center mt-8">
+        <p>&copy; 2605  胡胜杰</p>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
+    
