@@ -121,7 +121,7 @@ renderDemo('demo-unordered-list', '- 分支1\n- 分支2\n- 分支3');
 renderDemo('demo-ordered-list', '1. 分支1\n2. 分支2\n3. 分支3');
 renderDemo('demo-nested-list', '- 主分支\n  - 子分支1\n  - 子分支2\n    - 子子分支1');
 renderDemo('demo-emphasis', '**重要主题**\n*次要主题*');
-renderDemo('demo-link', '[相关资料](https://example.com)');
+renderDemo('demo-link', '[相关资料](https://www.bilibili.com/video/BV1ct4y1n7t9/?share_source=copy_web&vd_source=d23579b51f022983bf7256062915b949)');
 renderDemo('demo-image', '![示例图片](https://picsum.photos/200/300)');
 renderDemo('demo-table', '| 表头 1 | 表头 2 |\n| ---- | ---- |\n| 内容 1 | 内容 2 |');
 renderDemo('demo-footnote', '这是一个脚注 [^1]。\n[^1]: 脚注的具体内容');
